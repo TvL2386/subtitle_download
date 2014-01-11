@@ -24,6 +24,4 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'listen', '~> 2.0'
   gem.add_dependency 'nokogiri', '~> 1.6.1'
   gem.add_dependency 'rubyzip', '~> 1.1.0'
-
-  gem.extensions = 'ext/mkrf_conf.rb'
 end
