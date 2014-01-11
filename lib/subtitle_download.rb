@@ -3,18 +3,13 @@ module SubtitleDownload
 
   def self.run(directory)
     callback = Proc.new do |modified, added, removed|
-      if $DEBUG
-        puts "DEBUG: modified: #{modified.inspect}"
-        puts "DEBUG: added: #{added.inspect}"
-        puts "DEBUG: removed: #{removed.inspect}"
-      end
-
       added.each do |file|
         begin
-          puts "DEBUG: Searching subtitles for #{file.inspect}" if $DEBUG
+          puts "Searching subtitles for #{file.inspect}"
+
           searcher = Searcher.new(Episode.new(file))
           searcher.download_links(directory)
-          puts "DEBUG: Done!" if $DEBUG
+          puts 'Done!'
         rescue Exception => e
           puts "Something went wrong for: #{file}"
           puts "Exception class: #{e.class}"
