@@ -1,3 +1,5 @@
+require 'pathname'
+
 module SubtitleDownload
   class UnparseableFilename < BaseException ; end
 
@@ -11,9 +13,13 @@ module SubtitleDownload
     end
 
     private
+    def basename
+      @basename ||= Pathname.new(@filename).basename.to_s
+    end
+
     def parse
-      case @filename
-        when /^(.*)s(\d{2})e(\d{2})[^\d]+/i
+      case basename
+        when /^(.+)s(\d{2})e(\d{2})[^\d]+/i
           @season = $2.to_i
           @episode_number = $3.to_i
           @show = $1.gsub(/(1080|720)p?/,'').gsub(/20\d{2}/,'').gsub('.',' ').rstrip

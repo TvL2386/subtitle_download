@@ -1,8 +1,12 @@
 require 'spec_helper'
+require 'pathname'
+require 'tmpdir'
 
 describe Episode do
-  before :all do
-    @episode = Episode.new('My.Cool.Show.2004.720p.S07E12.HDTV.x264-LOL.mp4')
+  before do
+    file = Pathname.new(Dir::tmpdir)
+    file = file.join('My.Cool.Show.2004.720p.S07E12.HDTV.x264-LOL.mp4')
+    @episode = Episode.new file.to_s
   end
 
   it 'should be able to find the show' do
