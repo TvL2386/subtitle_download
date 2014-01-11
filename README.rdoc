@@ -1,0 +1,27 @@
+= subtitle_download
+
+* {Homepage}[https://rubygems.org/gems/subtitle_download]
+* {Documentation}[http://rubydoc.info/gems/subtitle_download/frames]
+* {Email}[mailto:tom.van.leeuwen at saasplaza.com]
+
+== Description
+
+TODO: Description
+
+== Features
+
+== Examples
+
+  require 'subtitle_download'
+
+== Requirements
+
+== Install
+
+  $ gem install subtitle_download
+
+== Copyright
+
+Copyright (c) 2014 Tom van Leeuwen
+
+See LICENSE.txt for details.
