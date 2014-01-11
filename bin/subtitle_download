@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+
+root = File.expand_path(File.join(File.dirname(__FILE__),'..'))
+if File.directory?(File.join(root,'.git'))
+  Dir.chdir(root) do
+    begin
+      require 'bundler/setup'
+    rescue LoadError => e
+      warn e.message
+      warn "Run `gem install bundler` to install Bundler"
+      exit -1
+    end
+  end
+end
+
+require 'subtitle_download'
+
+if ARGV.length != 1
+  puts "Usage: #{$0} <directory to watch>"
+  exit 1
+end
+
+SubtitleDownload.run(ARGV[0])
+sleep
+
+
