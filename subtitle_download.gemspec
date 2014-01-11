@@ -17,7 +17,7 @@ Gem::Specification.new do |gem|
 
   gem.add_development_dependency 'bundler', '~> 1.5.2'
   gem.add_development_dependency 'rake', '~> 10.1.1'
-  gem.add_development_dependency 'rdoc', '~> 3.0'
+  #gem.add_development_dependency 'rdoc', '~> 3.0'
   gem.add_development_dependency 'rspec', '~> 2.14.1'
   gem.add_development_dependency 'rubygems-tasks', '~> 0.2'
 
