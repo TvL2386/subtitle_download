@@ -3,8 +3,8 @@ require File.expand_path('../lib/subtitle_download/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.name          = 'subtitle_download'
   gem.version       = SubtitleDownload::VERSION
-  gem.summary       = %q{Automatically download subtitles}
-  gem.description   = %q{Download subtitles automatically on file creation}
+  gem.summary       = %q{Automatically download English subtitles}
+  gem.description   = %q{Download English subtitles automatically on file creation}
   gem.license       = 'MIT'
   gem.authors       = ['Tom van Leeuwen']
   gem.email         = 'tom@vleeuwen.eu'
