@@ -8,6 +8,8 @@ describe Watcher do
 
   before do
     @tmpdir = Pathname.new Dir::mktmpdir
+    @subdir = @tmpdir.join('subdirectory')
+    Dir.mkdir @subdir
 
     callback = Proc.new do |modified, added, removed|
       options[:modified] = modified
@@ -34,6 +36,14 @@ describe Watcher do
 
   it 'should not trigger on anything but mkv/mp4/avi' do
     file = @tmpdir.join('Sons of Anarchy S01E02.abc')
+    FileUtils.touch file
+    sleep 0.5
+
+    options[:added].should eq(nil)
+  end
+
+  it 'should not trigger on files in subdirectories' do
+    file = @subdir.join('Sons of Anarchy S01E01.mkv')
     FileUtils.touch file
     sleep 0.5
 

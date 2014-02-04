@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    subtitle_download (0.1.0)
+    subtitle_download (0.1.1)
       listen (~> 2.0)
       nokogiri (~> 1.6.1)
       rubyzip (~> 1.1.0)
