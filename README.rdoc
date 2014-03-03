@@ -1,5 +1,6 @@
 = subtitle_download
 
+* {<img src="https://gemnasium.com/TvL2386/subtitle_download.png" alt="Dependency Status" />}[https://gemnasium.com/TvL2386/subtitle_download]
 * {Homepage}[https://rubygems.org/gems/subtitle_download]
 * {Documentation}[http://rubydoc.info/gems/subtitle_download/frames]
 * {Email}[mailto:tom.van.leeuwen at saasplaza.com]
